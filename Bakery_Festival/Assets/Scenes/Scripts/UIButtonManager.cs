@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-
-public class UIButtonManager : MonoBehaviour
+using UnityEngine; 
+using UnityEngine.SceneManagement;
+public class UIButtonManager :MonoBehaviour
 {
     public GameObject[] Panels = new GameObject[6];
     private int Key = 0;
     private bool IsActive = false;
+
+
     public void FirstButPress()
     {
         Key = 0;
@@ -67,4 +69,9 @@ public class UIButtonManager : MonoBehaviour
         }
     }
 
+
+    public void SceneButMng()
+    {
+        
+    }
 }

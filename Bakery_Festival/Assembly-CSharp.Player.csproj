@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\Scripts\UIButtonManager.cs" />
+    <Compile Include="Assets\DataController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
