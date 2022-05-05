@@ -56,8 +56,11 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Scripts\UIButtonManager.cs" />
-    <Compile Include="Assets\DataController.cs" />
+    <Compile Include="Assets\Scripts\RouletteScript.cs" />
+    <Compile Include="Assets\Scripts\MusicMng.cs" />
+    <Compile Include="Assets\Scripts\UIButtonManager.cs" />
+    <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
+    <Compile Include="Assets\Scripts\NPC.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
