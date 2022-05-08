@@ -6,18 +6,20 @@ public class NPC : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
 
-    Transform target;
-    Rigidbody2D rigid;
-
+    public Transform target;
+    public string PositionType = "End";
+    Transform EndPos;
+    Rigidbody2D rigid; 
     private void Start()
     {
-        rigid = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("End").GetComponent<Transform>();
+        rigid = GetComponent<Rigidbody2D>(); 
+        EndPos = GameObject.FindGameObjectWithTag("End").GetComponent<Transform>();
+        target = EndPos;
     }
 
-    private void Update()
+    void Update()
     {
-        GoTarget();
+        GoTarget();        
     }
 
     void GoTarget()
@@ -26,5 +28,5 @@ public class NPC : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         }
-    }
+    }  
 }

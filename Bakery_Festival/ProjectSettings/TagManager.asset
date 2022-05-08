@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Target
   - End
+  - DestroyPosition
+  - NPC
   layers:
   - Default
   - TransparentFX

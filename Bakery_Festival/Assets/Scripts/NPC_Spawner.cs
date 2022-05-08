@@ -12,17 +12,14 @@ public class NPC_Spawner : MonoBehaviour
     float timer = 0;
     int count = 0;
 
-    private void Start()
-    {
-        Spawn();
-    }
+  
 
     private void Update()
     {
         if (count > MaxCount)
             return;
 
-        if (count <= MaxCount)
+        if (count < MaxCount)
         {
             
             Spawn();

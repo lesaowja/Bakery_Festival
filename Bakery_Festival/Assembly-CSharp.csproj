@@ -61,6 +61,9 @@
     <Compile Include="Assets\Scripts\UIButtonManager.cs" />
     <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\DestroyPointMng.cs" />
+    <Compile Include="Assets\Scripts\ShopManager.cs" />
+    <Compile Include="Assets\Scripts\ShopInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
