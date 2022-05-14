@@ -6,9 +6,17 @@ public class ShopInfo :MonoBehaviour
 {
     public bool IsActive = false;
     public bool IsWorking = false;
+    [SerializeField] int ShopNum;
     float Timer =0f;
+
+
+    ShopManager ShopMng;
     GameObject NpcObject;
 
+
+    private void Start()
+    { 
+    }
     private void Update()
     {
         if(IsWorking == true)
@@ -20,7 +28,14 @@ public class ShopInfo :MonoBehaviour
             }
             else
             {
-                IsWorking = false;
+                switch (ShopNum)
+                {
+                    case 0:
+
+                        break;
+                    default:
+                        break;
+                }
                 Destroy(NpcObject);
                 
             } 
