@@ -147,15 +147,13 @@ public class DataController : Singleton<DataController>
         {
             if (goldPerSecButtons[i].isBuy == true)                    // workButtons 버튼을 구매 했을 경우에만 goldPerCec 를 더해준다.
                 sum += goldPerSecButtons[i].goldPerCec;
-        }
-        Debug.Log("GetGoldPerSec 불림");
+        } 
         return sum;
     }
     public void SetGoldPerSec()
     {
         PlayerPrefs.SetInt("_isGoldPerSecSum", GetGoldPerSec());
-
-        Debug.Log(" 초당수익 저장");
+         
     }
 
 }

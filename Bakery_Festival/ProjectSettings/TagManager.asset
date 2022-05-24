@@ -8,6 +8,7 @@ TagManager:
   - End
   - DestroyPosition
   - NPC
+  - TargetToEnd
   layers:
   - Default
   - TransparentFX

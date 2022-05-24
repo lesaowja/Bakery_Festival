@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class ClickEffect : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] float power;
+    [SerializeField] float lifeTime;
+
+    float time;
+    Rigidbody2D rigid;
+
     void Start()
     {
-        
+        rigid = GetComponent<Rigidbody2D>();
+        rigid.AddForce(Vector2.up * power, ForceMode2D.Impulse);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        time += Time.deltaTime;
+        if (time > lifeTime)
+        {
+            Destroy(gameObject);
+            time = 0.0f;
+        }
     }
 }

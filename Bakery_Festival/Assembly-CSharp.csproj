@@ -60,15 +60,17 @@
     <Compile Include="Assets\Scripts\MusicMng.cs" />
     <Compile Include="Assets\Scripts\UIButtonManager.cs" />
     <Compile Include="Assets\Scripts\ShopInfo.cs" />
+    <Compile Include="Assets\Scripts\ClickEffect.cs" />
+    <Compile Include="Assets\Scripts\GoldPerSecButton.cs" />
     <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
+    <Compile Include="Assets\Scripts\DataController.cs" />
     <Compile Include="Assets\Scripts\DestroyPointMng.cs" />
+    <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\Scripts\DataController.cs" />
-    <Compile Include="Assets\Scripts\GoldPerSecButton.cs" />
-    <Compile Include="Assets\Scripts\Singleton.cs" />
-    <Compile Include="Assets\Scripts\ClickEffect.cs" />
+    <Compile Include="Assets\Scripts\RouletteResuiltGetButton.cs" />
+    <Compile Include="Assets\Scripts\UITextManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

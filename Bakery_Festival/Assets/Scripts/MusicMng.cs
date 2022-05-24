@@ -6,17 +6,18 @@ public class MusicMng : MonoBehaviour
 {
 
     int SongNum = 0;
+    [SerializeField] AudioSource MusicPlayer;
 
-    AudioSource MusicPlayer;
 
     void Start()
     {
         MusicPlayer = GetComponent<AudioSource>();
+
+        MusicPlayer.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 }

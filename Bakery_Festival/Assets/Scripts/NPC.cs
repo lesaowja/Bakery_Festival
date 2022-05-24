@@ -28,5 +28,13 @@ public class NPC : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         }
-    }  
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("TargetToEnd"))
+        { 
+            target = EndPos;
+        }
+    }
 }

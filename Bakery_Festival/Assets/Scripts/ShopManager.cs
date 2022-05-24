@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour
 {
-
+    
     [SerializeField]GameObject[] shops = new GameObject[4];
     ShopInfo Shop0;
     ShopInfo Shop1;
@@ -42,7 +42,7 @@ public class ShopManager : MonoBehaviour
             int RandNum = Random.Range(1, 2);
             if(RandNum == 0){}
             else
-            {
+            { 
                 if (!Shop0.IsWorking && collision.gameObject.GetComponent<NPC>().PositionType == "End")
                 {
                     collision.gameObject.GetComponent<NPC>().target = Shop0.gameObject.transform;
@@ -66,10 +66,13 @@ public class ShopManager : MonoBehaviour
                     collision.gameObject.GetComponent<NPC>().target = Shop3.gameObject.transform;
                     collision.gameObject.GetComponent<NPC>().PositionType = "Store";
                     Shop3Check = true;
-                }
+                } 
+
+
             }
             
              
         }
     }
+    
 }

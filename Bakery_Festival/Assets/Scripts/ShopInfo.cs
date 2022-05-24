@@ -7,11 +7,13 @@ public class ShopInfo :MonoBehaviour
     public bool IsActive = false;
     public bool IsWorking = false;
     [SerializeField] int ShopNum;
-    float Timer =0f;
+    float Timer =1f;
 
 
     ShopManager ShopMng;
     GameObject NpcObject;
+
+    [SerializeField]GameObject BackToLine;
 
 
     private void Start()
@@ -31,7 +33,6 @@ public class ShopInfo :MonoBehaviour
                 switch (ShopNum)
                 {
                     case 0:
-
                         break;
                     default:
                         break;
@@ -43,10 +44,31 @@ public class ShopInfo :MonoBehaviour
        
     }
 
+
+
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.gameObject.CompareTag("NPC"))
         Timer = 4f;
-        NpcObject = collision.gameObject;
+       
     }
-    
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("NPC"))
+        {
+            while (true)
+            {
+                Debug.Log(Timer + this.gameObject.name);
+                Timer -= Time.deltaTime;
+                if (Timer < 0)
+                {
+
+                    Debug.Log("TImeOUt" + this.gameObject.name);
+                    break;
+                }
+            }
+        }
+       
+    }
+
 }
