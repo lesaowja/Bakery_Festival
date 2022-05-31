@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{ECA52B50-BC2C-CFB3-EA33-59A7725870F5}</ProjectGuid>
+    <ProjectGuid>{89CC2E15-71A3-C3E8-0672-0F7EF63317DF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>PsdPlugin</AssemblyName>
@@ -71,8 +71,8 @@
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PhotoShopFileType\DocumentLoadContext.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PDNWrapper\Rectangle.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\AssemblyInfo.cs" />
-    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PsdFile\RleRowLengths.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PsdFile\ImageResources\ResolutionInfo.cs" />
+    <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PsdFile\RleRowLengths.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PhotoShopFileType\BlendModeMapping.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PsdFile\RleReader.cs" />
     <Compile Include="Library\PackageCache\com.unity.2d.psdimporter@4.3.0\Editor\PSDPlugin\PsdFile\Exceptions.cs" />
@@ -707,19 +707,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{BD9F6338-2D07-21E2-D917-0CEC7E8510EA}</Project>
+      <Project>{45F68FEB-B7AA-94D6-9A68-1341C73B233A}</Project>
       <Name>UnityEditor.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{DCA2A78D-6B5E-5405-8DEC-A1B0A84E00BC}</Project>
+      <Project>{F2C229D7-A2AE-6497-534A-94A9DD28C79B}</Project>
       <Name>UnityEngine.UI</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.TestRunner.csproj">
-      <Project>{3C757886-B57E-E78C-224E-D0EE8EDD2591}</Project>
+      <Project>{01BEA557-6EEB-BA61-8578-21CA169E3F26}</Project>
       <Name>UnityEngine.TestRunner</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEditor.TestRunner.csproj">
-      <Project>{8EBB1C9C-0FCB-A174-9DA4-9F01F8C76BA7}</Project>
+      <Project>{A1E047ED-44FF-6D19-BA1B-2867BBE3144E}</Project>
       <Name>UnityEditor.TestRunner</Name>
     </ProjectReference>
   </ItemGroup>

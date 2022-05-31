@@ -5,36 +5,47 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     [SerializeField] float moveSpeed;
+    [SerializeField] float Destorytimer;
 
-    public Transform target;
-    public string PositionType = "End";
     Transform EndPos;
-    Rigidbody2D rigid; 
+    Rigidbody2D rigid;
+  
+    float lifeTimer;
+
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>(); 
-        EndPos = GameObject.FindGameObjectWithTag("End").GetComponent<Transform>();
-        target = EndPos;
+        EndPos = GameObject.FindGameObjectWithTag("L_End").GetComponent<Transform>();
     }
 
     void Update()
     {
-        GoTarget();        
+        GoTarget();
+        Destroy();
+        lifeTimer += Time.deltaTime;
     }
 
     void GoTarget()
     {
-        if (Vector2.Distance(transform.position, target.position) > 0.1f)
+        if (Vector2.Distance(transform.position, EndPos.position) > 0.1f)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, EndPos.position, moveSpeed * Time.deltaTime);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("TargetToEnd"))
-        { 
-            target = EndPos;
+        if(collision.gameObject.CompareTag("L_End"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void Destroy()
+    {
+        if(lifeTimer >= Destorytimer)
+        {
+            Destroy(gameObject);
         }
     }
 }
