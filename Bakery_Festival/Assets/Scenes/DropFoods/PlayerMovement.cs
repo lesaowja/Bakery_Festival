@@ -13,17 +13,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rigid = GetComponent<Rigidbody2D>();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            LookRight = !LookRight;
-        }
-        if (Input.GetButtonUp("Horizontal"))
-        {
-            rigid.velocity = new Vector2(rigid.velocity.normalized.x * 0.5f, rigid.velocity.y);
-        }
-    }
+   
     private void FixedUpdate()
     { 
         if (LookRight) 
@@ -42,5 +32,8 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-
+    public void FlipBut()
+    {
+        LookRight = !LookRight;
+    }
 }
