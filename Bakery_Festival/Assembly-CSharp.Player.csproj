@@ -74,9 +74,10 @@
     <Compile Include="Assets\Scripts\RouletteResuiltGetButton.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scenes\DropFoods\DropFoodsDataMng.cs" />
+    <Compile Include="Assets\TrashBar.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\TrashBar.cs" />
+    <Compile Include="Assets\EmptyPlace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />
