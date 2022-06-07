@@ -127,6 +127,7 @@ public class R_NPC : MonoBehaviour
         }
         if (collision.gameObject.name == "CakeShopBox" && ReturnTempNum != 3)
         {
+            Debug.Log("CakeShopCollision");
             ReturnTempNum = 3;
             int RandN = Random.Range(1, 2);
             Transform T1;
@@ -325,36 +326,62 @@ public class R_NPC : MonoBehaviour
             {
                 case 1:
                     GameObject.Find("PieShopStay1").GetComponent<EmptyPlace>().IsEmpty = true;
-                     
-                    break;
+                    yield return new WaitForSeconds(1.5f); 
+                    SetTarget(EndPos.transform.position);  
+                break;
+
                 case 2:
                     GameObject.Find("PieShopStay2").GetComponent<EmptyPlace>().IsEmpty = true;
-                   
-                    break;
+                    yield return new WaitForSeconds(1.5f);
+                 SetTarget(EndPos.transform.position);
+                break;
+
                 case 3:
                     GameObject.Find("CookieShopStay1").GetComponent<EmptyPlace>().IsEmpty = true;
-                   
-                    break;
+                  yield return new WaitForSeconds(1.5f);
+                   SetTarget(EndPos.transform.position); 
+                break;
+
                 case 4:
                     GameObject.Find("CookieShopStay2").GetComponent<EmptyPlace>().IsEmpty = true;
-                    break;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
+                break;
+
                 case 5:
                     GameObject.Find("CakeShopStay1").GetComponent<EmptyPlace>().IsEmpty = true;
-                    break;
+                    yield return new WaitForSeconds(1.5f);
+                 SetTarget(EndPos.transform.position);
+                 break;
+
                 case 6:
                     GameObject.Find("CakeShopStay2").GetComponent<EmptyPlace>().IsEmpty = true;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
                     break;
+
                 case 7:
                     GameObject.Find("DonutShopStay1").GetComponent<EmptyPlace>().IsEmpty = true;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
                     break;
+
                 case 8:
                     GameObject.Find("DonutShopStay2").GetComponent<EmptyPlace>().IsEmpty = true;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
                     break;
+
                 case 9:
                     GameObject.Find("MelonShopStay1").GetComponent<EmptyPlace>().IsEmpty = true;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
                     break;
+
                 case 10:
                     GameObject.Find("MelonShopStay2").GetComponent<EmptyPlace>().IsEmpty = true;
+                    yield return new WaitForSeconds(1.5f);
+                    SetTarget(EndPos.transform.position);
                     break;
                
                 default:
