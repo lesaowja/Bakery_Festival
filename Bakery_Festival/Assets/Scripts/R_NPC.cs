@@ -15,8 +15,7 @@ public class R_NPC : MonoBehaviour
     Rigidbody2D rigid;
 
     float lifeTimer;
-
-    int ReturnT = 0;
+     
 
     int ReturnToNew = 99999;
     int ReturnTempNum = 99991;
@@ -214,8 +213,7 @@ public class R_NPC : MonoBehaviour
 
         }
         if (collision.gameObject.CompareTag("StartTimer"))
-        {
-            ReturnT = 0;
+        { 
             StartCoroutine("ReturnTimer");
         }
     }

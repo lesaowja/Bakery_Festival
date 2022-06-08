@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{43CCF079-2D56-B5C7-6D6B-F36EE2D64C11}</ProjectGuid>
+    <ProjectGuid>{C7C3B2E5-5CF5-30FE-9B38-C1786048F90E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\GoldPerSecButton.cs" />
     <Compile Include="Assets\Scenes\DropFoods\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
+    <Compile Include="Assets\EmptyPlace.cs" />
     <Compile Include="Assets\Scripts\R_NPC_Spawn.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\DataController.cs" />
@@ -77,7 +78,6 @@
     <Compile Include="Assets\TrashBar.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\EmptyPlace.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />
@@ -690,47 +690,47 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.InternalAPIEngineBridge.001.Player.csproj">
-      <Project>{FAF24168-02E1-A2FB-6BB4-E474D995FAA1}</Project>
+      <Project>{E66AC0C4-04B2-0134-6073-64CB7E098386}</Project>
       <Name>Unity.InternalAPIEngineBridge.001.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.PixelPerfect.Player.csproj">
-      <Project>{EC706374-E3ED-16E2-2887-985E0ABAC44C}</Project>
+      <Project>{5471656A-C16D-FE3E-F542-BDA14CAF98D2}</Project>
       <Name>Unity.2D.PixelPerfect.Player</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity.Player.csproj">
-      <Project>{4B7B2252-E9DA-9831-BAD2-7189F966F9B7}</Project>
+      <Project>{4668C67A-F789-1DF7-0ACB-3764E8F326FE}</Project>
       <Name>spine-unity.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Timeline.Player.csproj">
-      <Project>{75AE22BB-33DD-137B-246C-4821AFA5F381}</Project>
+      <Project>{CDC5F17C-E6B2-CE7E-68BE-B461027742ED}</Project>
       <Name>Unity.Timeline.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.TextMeshPro.Player.csproj">
-      <Project>{0C58A9C4-21B0-6F85-342A-AF6E9F81BD7D}</Project>
+      <Project>{339EB8DA-32D0-ECDD-00B9-83687D345A89}</Project>
       <Name>Unity.TextMeshPro.Player</Name>
     </ProjectReference>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{4E73BECF-B28B-C30C-2BAD-9EEAE127EB43}</Project>
+      <Project>{5C4AF1E2-6FC2-C71E-CE69-CE6910039F87}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.Mathematics.Player.csproj">
-      <Project>{7CD4FEBA-2DBE-A75C-D5A9-F45C8B6DAC94}</Project>
+      <Project>{2DB531F5-E048-2305-CE45-2C21B6610041}</Project>
       <Name>Unity.Mathematics.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.IK.Runtime.Player.csproj">
-      <Project>{BBE5C522-E65C-84E7-97D9-D57909ACFC87}</Project>
+      <Project>{6E4255FA-0819-D282-7E67-F5A89D911FE6}</Project>
       <Name>Unity.2D.IK.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Animation.Runtime.Player.csproj">
-      <Project>{D1ACE802-C02F-24C7-66E1-690D5D1386F3}</Project>
+      <Project>{B6D5272A-7C0E-6FF4-6699-713895B47710}</Project>
       <Name>Unity.2D.Animation.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.Common.Runtime.Player.csproj">
-      <Project>{F835952B-75C8-960B-46E6-A4200912B8A2}</Project>
+      <Project>{6429BB04-DBAB-31E1-765B-444E3AB4A528}</Project>
       <Name>Unity.2D.Common.Runtime.Player</Name>
     </ProjectReference>
     <ProjectReference Include="Unity.2D.SpriteShape.Runtime.Player.csproj">
-      <Project>{8EF52146-7A25-AF01-CAA8-67D83C12A50B}</Project>
+      <Project>{2D53EE53-715B-E1D2-DD40-26E57BBCD560}</Project>
       <Name>Unity.2D.SpriteShape.Runtime.Player</Name>
     </ProjectReference>
   </ItemGroup>
