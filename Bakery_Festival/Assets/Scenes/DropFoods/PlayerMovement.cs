@@ -12,6 +12,15 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
+
+         if(LookRight)
+        {
+            this.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        { 
+            this.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
    
     private void FixedUpdate()
@@ -21,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             rigid.velocity = new Vector2(Speed * Time.deltaTime, rigid.velocity.y);
         }
         else if (!LookRight)  
-        {
+        { 
             rigid.velocity = new Vector2((-1)*Speed*Time.deltaTime, rigid.velocity.y);
         }
     }
@@ -35,5 +44,13 @@ public class PlayerMovement : MonoBehaviour
     public void FlipBut()
     {
         LookRight = !LookRight;
+        if(LookRight)
+        {
+            this.transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else
+        { 
+            this.transform.eulerAngles = new Vector3(0, 0, 0);
+        }
     }
 }
