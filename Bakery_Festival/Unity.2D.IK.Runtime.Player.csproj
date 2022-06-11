@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6E4255FA-0819-D282-7E67-F5A89D911FE6}</ProjectGuid>
+    <ProjectGuid>{BBE5C522-E65C-84E7-97D9-D57909ACFC87}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.IK.Runtime</AssemblyName>
@@ -620,7 +620,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="UnityEngine.UI.Player.csproj">
-      <Project>{5C4AF1E2-6FC2-C71E-CE69-CE6910039F87}</Project>
+      <Project>{4E73BECF-B28B-C30C-2BAD-9EEAE127EB43}</Project>
       <Name>UnityEngine.UI.Player</Name>
     </ProjectReference>
   </ItemGroup>

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
-    [SerializeField] float moveSpeed;
     [SerializeField] float Destorytimer;
     //위에서 스폰된 NPC가 돌아가기위한 Y좌표를 받기위한 transform
+
+    [SerializeField] float percent; // 캐릭터 이동 비율 퍼센트
     Transform UpNpcPos;
     
     Transform EndPos;
@@ -16,6 +17,9 @@ public class NPC : MonoBehaviour
     Rigidbody2D rigid;
 
     float lifeTimer;
+    float moveSpeed;
+
+    int width = Screen.width;       // 가로 해상도
 
     [SerializeField] int NpcType = 0;
 
@@ -24,13 +28,14 @@ public class NPC : MonoBehaviour
     int ReturnTempNum = 99991;
     private void Start()
     {
-
         rigid = GetComponent<Rigidbody2D>();
 
         //EndPos 안에 끝지점을 정해줄 Transform 을 집어넣는다
         EndPos = GameObject.FindGameObjectWithTag("L_End").GetComponent<Transform>();
         //R_end가 tag중에 사용안되고 남는 상황이 되어 재사용겸 사용
         UpNpcPos = GameObject.FindGameObjectWithTag("R_End").GetComponent<Transform>();
+
+        moveSpeed = (width * percent) / 100;
     }
 
     void Update()
