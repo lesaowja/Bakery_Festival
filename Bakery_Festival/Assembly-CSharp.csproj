@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AB842FE8-37D9-098A-D7C3-FBC06BD9EF1B}</ProjectGuid>
+    <ProjectGuid>{F95396AD-B817-B581-B701-9F9F85753A1F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -79,6 +79,7 @@
     <Compile Include="Assets\TrashBar.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
+    <Compile Include="Assets\FestivalManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />
@@ -746,11 +747,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="spine-unity.csproj">
-      <Project>{86361E5C-03E1-B992-0AAF-9382ADC9FC4C}</Project>
+      <Project>{488221EE-1B26-2AE8-123B-F708FB9307FB}</Project>
       <Name>spine-unity</Name>
     </ProjectReference>
     <ProjectReference Include="spine-unity-editor.csproj">
-      <Project>{DCFBA119-77A4-2313-2B21-C681C433FA39}</Project>
+      <Project>{E57FFF34-6F43-E991-D034-759C77AAD901}</Project>
       <Name>spine-unity-editor</Name>
     </ProjectReference>
   </ItemGroup>

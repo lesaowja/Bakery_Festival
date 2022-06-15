@@ -26,10 +26,14 @@ public class NPC : MonoBehaviour
     //상점에 다가간후 다시 들어갈수있는 곳이라는 것을 나타내기 위한 함수
     int ReturnToNew = 99999;
     int ReturnTempNum = 99991;
+
+    //Festival을 컨트롤 하기위한 소환
+    FestivalManager festivalMng;
+    
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-
+        festivalMng = GameObject.Find("DataController").GetComponent<FestivalManager>();
         //EndPos 안에 끝지점을 정해줄 Transform 을 집어넣는다
         EndPos = GameObject.FindGameObjectWithTag("L_End").GetComponent<Transform>();
         //R_end가 tag중에 사용안되고 남는 상황이 되어 재사용겸 사용
@@ -84,6 +88,7 @@ public class NPC : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("L_End"))
         {
+            festivalMng.DeletedNpc();
             Destroy(this.gameObject);
         }
 
