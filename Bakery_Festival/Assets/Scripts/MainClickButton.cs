@@ -12,7 +12,7 @@ public class MainClickButton : MonoBehaviour
 
     private void Start()
     {
-        festivalMng= GameObject.Find("DataController").GetComponent<FestivalManager>();
+        festivalMng = GameObject.Find("DataController").GetComponent<FestivalManager>();
         Debug.Log(festivalMng);
     }
     public void OnMouseDown()
@@ -20,7 +20,7 @@ public class MainClickButton : MonoBehaviour
         // 터치 위치
         //Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         creatPonit = Input.mousePosition;
-        
+
         DataController.Instance.Gold += DataController.Instance.ClickGold;
         MouseClick();
     }
