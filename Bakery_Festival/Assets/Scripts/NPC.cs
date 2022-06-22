@@ -11,17 +11,18 @@ public class NPC : MonoBehaviour
     //위에서 스폰된 NPC가 돌아가기위한 Y좌표를 받기위한 transform
 
     [SerializeField] float percent; // 캐릭터 이동 비율 퍼센트
-    Transform UpNpcPos;
-
-    Transform EndPos;
-    public bool HaveTarget = false;
     [SerializeField] Vector3 TargetPos;
+    [SerializeField] int NpcType = 0;
+
+    Transform UpNpcPos;
+    Transform EndPos;
+
+    public bool HaveTarget = false;
     float DoubleMoveSpeed;
     float DefaultmoveSpeed;
     float moveSpeed;
     int width = Screen.width;       // 가로 해상도
 
-    [SerializeField] int NpcType = 0;
 
     //상점에 다가간후 다시 들어갈수있는 곳이라는 것을 나타내기 위한 함수
     int ReturnToNew = 99999;
@@ -48,6 +49,25 @@ public class NPC : MonoBehaviour
         IsFestivalNow = GameObject.Find("DataController").GetComponent<FestivalManager>().IsFestival;
         if(IsFestivalNow)
         {
+
+            //축제가 되었을때 다시 비어있는 상태라고 설정 해주는 것.
+            GameObject.Find("PieShopStay3").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("PieShopStay4").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CookieShopStay3").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CookieShopStay4").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CakeShopStay3").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CakeShopStay4").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("DonutShopStay3").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("DonutShopStay4").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("MelonShopStay3").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("MelonShopStay4").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("PieShopStay5").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CookieShopStay5").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("CakeShopStay5").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("DonutShopStay5").GetComponent<EmptyPlace>().IsEmpty = true;
+            GameObject.Find("MelonShopStay5").GetComponent<EmptyPlace>().IsEmpty = true;
+
+
             SetTarget(EndPos.transform.position);
             MoveToTarget(TargetPos);
             moveSpeed = DoubleMoveSpeed;

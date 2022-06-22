@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\MakeNewName.cs" />
     <Compile Include="Assets\Scripts\PerSecUpButton.cs" />
     <Compile Include="Assets\Scripts\RouletteScript.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets\Scripts\UIButtonManager.cs" />
     <Compile Include="Assets\Scripts\ShopInfo.cs" />
     <Compile Include="Assets\Scripts\ClickEffect.cs" />
+    <Compile Include="Assets\Scripts\SpineManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
     <Compile Include="Assets\Scripts\EmptyPlace.cs" />
@@ -82,7 +84,11 @@
     <Compile Include="Assets\Scripts\TrashBar.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\FestivalManager.cs" />
+    <Compile Include="Assets\Scripts\TextMannger.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
+    <Compile Include="Assets\DropFoodsPointMng.cs" />
+    <Compile Include="Assets\DeleteBreads.cs" />
+    <Compile Include="Assets\DropFoodsStartTImers.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />

@@ -79,10 +79,7 @@ public class UIButtonManager : MonoBehaviour
                 else
                 {
                     Panels[i].SetActive(false);
-                }
-               
-
-
+                }            
             }
         }
         else
