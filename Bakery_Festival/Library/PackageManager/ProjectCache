@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637915049060000000
+      ticks: 637916222150000000
     m_Hash: 1498389506
   m_LockFileStatus:
     m_FilePath: C:/Users/Kim LESA/Downloads/2BKUP/2D_Bakery_Festival-main/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637915049060000000
+      ticks: 637916222150000000
     m_Hash: 1102651484
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -543,6 +543,7 @@ m_PackageAssets:
         - 7.0.2
         - 7.0.3
         - 7.0.4
+        - 7.0.5
         - 8.0.0-pre.4
         - 8.0.0-pre.5
         - 8.0.0
@@ -728,6 +729,7 @@ m_PackageAssets:
         - 1.15.17
         - 1.15.18
         - 1.17.0
+        - 1.17.1
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -744,6 +746,7 @@ m_PackageAssets:
         - 1.15.17
         - 1.15.18
         - 1.17.0
+        - 1.17.1
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
