@@ -53,10 +53,6 @@ public class NPC_Spawner : MonoBehaviour
             Instantiate(Duck, pivot.position, Quaternion.Euler(0, 180, 0), GameObject.Find("NpcGroups").transform);
             HaveSpawn = true;
         }
-        else
-        {
-            Instantiate(Wolf, pivot.position, Quaternion.Euler(0, 180, 0), GameObject.Find("NpcGroups").transform);
-            HaveSpawn = true;
-        }
+       
     }
 }
