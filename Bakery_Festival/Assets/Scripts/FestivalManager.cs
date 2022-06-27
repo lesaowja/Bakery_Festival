@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class FestivalManager : MonoBehaviour
 {
     //위 아래에서 차례대로 소환하기 위한 구분 BOOL값
@@ -11,12 +11,17 @@ public class FestivalManager : MonoBehaviour
     //현재까지 누른 터치값
     int TouchCounter = 0;
     //축제가 열리기 위한 NPC 갯수
-    [SerializeField] int FestivalCount = 0;
+    public float FestivalTotalCount =0f;
+    [SerializeField] float FestivalCount = 0f;
     //축제중인지 알기 위한 함수
     public bool IsFestival = false;
 
     //축제 타이머 
     float FestivalTime = 0;
+
+    //게이지바를 채우기 위한 이미지
+    [SerializeField]Image FilledImage;
+
 
     NPC_Spawner UpSpawner;
     NPC_Spawner DownSpawner;
@@ -38,7 +43,7 @@ public class FestivalManager : MonoBehaviour
     void SpawnTheNpc()
     {
         TouchCounter = 0;
-        if (FestivalCount == 10)
+        if (FestivalCount >= FestivalTotalCount)
         {
             IsFestival = true;
             FestivalTime = 0;
@@ -49,13 +54,15 @@ public class FestivalManager : MonoBehaviour
             if (SpawnType == true)
             {
                 DownSpawner.Spawn();
-                FestivalCount++;
+                FestivalCount++;  
             }
             else
             {
                 UpSpawner.Spawn();
-                FestivalCount++;
+                FestivalCount++; 
             }
+            float Nums = 1 / FestivalTotalCount * FestivalCount;
+            FilledImage.fillAmount = Nums;
             SpawnType = !SpawnType;
         }
         
@@ -76,8 +83,10 @@ public class FestivalManager : MonoBehaviour
         else
         {
             StartCoroutine("FestivalFunc");
+            FilledImage.fillAmount = 0;
         }
 
         yield return 0;
     }
+     
 }

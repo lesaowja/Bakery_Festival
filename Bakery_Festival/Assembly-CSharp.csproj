@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\SceneManager.cs" />
     <Compile Include="Assets\Scripts\MakeNewName.cs" />
     <Compile Include="Assets\Scripts\PerSecUpButton.cs" />
+    <Compile Include="Assets\RouletteManager.cs" />
     <Compile Include="Assets\Scripts\RouletteScript.cs" />
     <Compile Include="Assets\Scripts\UITextManager.cs" />
     <Compile Include="Assets\Scripts\R_NPC.cs" />
@@ -89,19 +90,27 @@
     <Compile Include="Assets\Scripts\FestivalManager.cs" />
     <Compile Include="Assets\Scripts\TextMannger.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\RouletteManager.cs" />
+    <Compile Include="Assets\DuckBugFixed.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Spine\hip_man\hip_man.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\Spine\cat 1\cat.atlas.txt" />
+    <None Include="Assets\Spine\dragon\dragon.atlas.txt" />
+    <None Include="Assets\Spine\husky 1\husky.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+    <None Include="Assets\Spine\duck 1\duck.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Spine\clerk_panda.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\Spine\yellow_girl\yellow_girl.atlas.txt" />
+    <None Include="Assets\Spine\wolf_girl\wolf_girl.atlas.txt" />
     <None Include="Assets\Spine\Panda\clerk_panda.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\Spine\red_riding_hood\red_riding_hood.atlas.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
