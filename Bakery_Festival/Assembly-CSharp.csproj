@@ -57,11 +57,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SceneManager.cs" />
+    <Compile Include="Assets\Scripts\ShopController.cs" />
     <Compile Include="Assets\Scripts\MakeNewName.cs" />
     <Compile Include="Assets\Scripts\PerSecUpButton.cs" />
-    <Compile Include="Assets\RouletteManager.cs" />
+    <Compile Include="Assets\Scripts\RouletteManager.cs" />
     <Compile Include="Assets\Scripts\RouletteScript.cs" />
+    <Compile Include="Assets\Scripts\ClickButMusicMng.cs" />
     <Compile Include="Assets\Scripts\UITextManager.cs" />
+    <Compile Include="Assets\Scripts\DuckBugFixed.cs" />
     <Compile Include="Assets\Scripts\R_NPC.cs" />
     <Compile Include="Assets\Scripts\MusicMng.cs" />
     <Compile Include="Assets\Scripts\GenerateFoods.cs" />
@@ -70,11 +73,13 @@
     <Compile Include="Assets\Scripts\ClickEffect.cs" />
     <Compile Include="Assets\Scripts\SpineManager.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\MiniGameUiMng.cs" />
     <Compile Include="Assets\Scripts\NPC_Spawner.cs" />
-    <Compile Include="Assets\DropFoodsStartTImers.cs" />
-    <Compile Include="Assets\DropFoodsPointMng.cs" />
+    <Compile Include="Assets\Scripts\DropFoodsStartTImers.cs" />
+    <Compile Include="Assets\Scripts\DropFoodsPointMng.cs" />
     <Compile Include="Assets\Scripts\EmptyPlace.cs" />
     <Compile Include="Assets\Scripts\DeleteDataAll.cs" />
+    <Compile Include="Assets\Scripts\MiniGameCoolDown.cs" />
     <Compile Include="Assets\Scripts\R_NPC_Spawn.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
     <Compile Include="Assets\Scripts\MainSecondPanel.cs" />
@@ -84,13 +89,13 @@
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\ClickUpButton.cs" />
     <Compile Include="Assets\Scripts\DropFoodsDataMng.cs" />
-    <Compile Include="Assets\DeleteBreads.cs" />
+    <Compile Include="Assets\Scripts\DeleteBreads.cs" />
     <Compile Include="Assets\Scripts\TrashBar.cs" />
     <Compile Include="Assets\Scripts\ShopManager.cs" />
     <Compile Include="Assets\Scripts\FestivalManager.cs" />
     <Compile Include="Assets\Scripts\TextMannger.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\DuckBugFixed.cs" />
+    <Compile Include="Assets\RouletteMusicMng.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />

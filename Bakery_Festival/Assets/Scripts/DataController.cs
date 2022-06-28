@@ -21,10 +21,10 @@ public class DataController : Singleton<DataController>
 
     private void Update()
     {
-        Debug.Log("초당 수익 : " + PlayerPrefs.GetInt("_isGoldPerSecSum") + " 원");
+        //Debug.Log("초당 수익 : " + PlayerPrefs.GetInt("_isGoldPerSecSum") + " 원");
 
         goldPerSecButtons = FindObjectsOfType<PerSecUpButton>();
-        Debug.Log("초당 수익 함수 : " + GetGoldPerSec());
+        //Debug.Log("초당 수익 함수 : " + GetGoldPerSec());
     }
 
     // 마지막 플레이 날짜
@@ -244,4 +244,5 @@ public class DataController : Singleton<DataController>
     {
         MakeNewName.Instance.playerNameInput.text = PlayerPrefs.GetString("Name");
     }
+
 }

@@ -6,6 +6,7 @@ public class DropFoodsStartTImers : MonoBehaviour
 {
     //게임 시작하기 전에 3초 카운트를 적어주기 위한 패널과 텍스트 그리고 문자열이 들어갈 String 과 시간을 적어줄 Int
     public GameObject panel;
+    public GameObject[] Buttons = new GameObject[3];
     public Text TimerText;
     string TimerString;
     int StartTimer;
@@ -19,13 +20,25 @@ public class DropFoodsStartTImers : MonoBehaviour
     public GameObject EndPanel;
     public Text EndText;
     public string EndString;
+
+    public Text Timer;
+    public Text Point;
     private void Start()
     {
 
         sec1 = 1f;
-        GameTimer = 10;
+       
+    }
+
+    public void StartBut()
+    {
+        GameTimer = 15;
         StartTimer = 3;
         StartCoroutine("StartTimerCourtine");
+        for(int i = 0; i<Buttons.Length; i++)
+        {
+            Buttons[i].SetActive(false);
+        }
     }
 
     IEnumerator StartTimerCourtine()
@@ -71,9 +84,9 @@ public class DropFoodsStartTImers : MonoBehaviour
             {
                 sec1 = 1;
                 GameTimer -= 1;
-
             }
 
+            Timer.text = GameTimer.ToString();
             TimerString = StartTimer.ToString();
             TimerText.text = TimerString;
             StartCoroutine("StartGameTimerCourtine");
@@ -86,7 +99,33 @@ public class DropFoodsStartTImers : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             int ResultSum = GameObject.Find("GameMng").GetComponent<DropFoodsPointMng>().PointsNum;
             EndPanel.SetActive(true);
-            EndString = "이번에 획득한 점수는 :" + ResultSum.ToString();
+
+            if (ResultSum <= 800)
+            {
+                EndString = "형편없구만 이거먹고 떨어지게";
+                //제일 낮은 보상
+            }
+            else if (ResultSum > 800 && ResultSum <= 950)
+            {
+                EndString = "쓸모가 없진않네";
+            }
+            else if (ResultSum > 950 && ResultSum <= 1100)
+            {
+                EndString = "조금만 더 노력해 보게";
+            }
+            else if (ResultSum > 1100 && ResultSum <= 1200)
+            {
+                EndString = "하면 되지않나 하하하";
+            }
+            else if (ResultSum > 1200 && ResultSum <= 1400)
+            {
+                EndString = "놀랍구만.!!";
+            }
+            else if (ResultSum > 1400)
+            {
+                EndString = "뭐하는 사람인가 자네는?";
+            }
+           
             EndText.text = EndString;
 
         }

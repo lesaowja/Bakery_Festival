@@ -15,20 +15,29 @@ public class RouletteScript : MonoBehaviour
     public float SpinSpeed = 0f;
     public Text ResultText;
     public GameObject ResultPanel;
+
+    RouletteMusicMng RouletteSong;
+
+    private void Start()
+    {
+        RouletteSong = GameObject.Find("BGMMng").GetComponent<RouletteMusicMng>();
+    }
     void Update()
     {
         if (CanPressBut)
         {
             if (PressBut)
             {
+                if(!RouletteSong.Speaker.isPlaying)
+                RouletteSong.FirstSong();
                 this.SpinSpeed = 15;
             }
             else
             {
                 if (SpinSpeed > 0.01)
-                {
+                { 
                     CanPressBut = false;
-                    this.SpinSpeed *= 0.997f;
+                    this.SpinSpeed *= 0.99f;
                     IsSpin = true;
                 }
                 else
@@ -40,6 +49,8 @@ public class RouletteScript : MonoBehaviour
                     {
                         Debug.Log(transform.eulerAngles);
                         ResultPanel.SetActive(true);
+
+                        RouletteSong.SecondSong();
                         if (RouletteType == "Gold")
                         {
                             if (this.transform.eulerAngles.z > 0 && this.transform.eulerAngles.z <= 45)
@@ -79,7 +90,7 @@ public class RouletteScript : MonoBehaviour
                                 ResultText.text = "8¸¸·çºñ È¹µæ!";
                         }
 
-
+                        
 
                         HaveResult = false;
                     }
