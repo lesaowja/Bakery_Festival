@@ -11,6 +11,10 @@ public class RouletteScript : MonoBehaviour
     //버튼을 누를수 있는 상태인가 
     public bool CanPressBut = true;
 
+    //시작하기전에 의사여부 물어볼 패넣
+    public GameObject StartPanel;
+    public Text StartPanelText;
+
     private bool HaveResult = false;
     public float SpinSpeed = 0f;
     public Text ResultText;
@@ -18,9 +22,15 @@ public class RouletteScript : MonoBehaviour
 
     RouletteMusicMng RouletteSong;
 
+    public long rouletteGoldCost;
+    public long rouletteRubyCost;
+
+
     private void Start()
     {
         RouletteSong = GameObject.Find("BGMMng").GetComponent<RouletteMusicMng>();
+  
+
     }
     void Update()
     {
@@ -28,14 +38,14 @@ public class RouletteScript : MonoBehaviour
         {
             if (PressBut)
             {
-                if(!RouletteSong.Speaker.isPlaying)
-                RouletteSong.FirstSong();
+                if (!RouletteSong.Speaker.isPlaying)
+                    RouletteSong.FirstSong();
                 this.SpinSpeed = 15;
             }
             else
             {
                 if (SpinSpeed > 0.01)
-                { 
+                {
                     CanPressBut = false;
                     this.SpinSpeed *= 0.99f;
                     IsSpin = true;
@@ -90,7 +100,7 @@ public class RouletteScript : MonoBehaviour
                                 ResultText.text = "8만루비 획득!";
                         }
 
-                        
+
 
                         HaveResult = false;
                     }
@@ -99,10 +109,9 @@ public class RouletteScript : MonoBehaviour
             transform.Rotate(0, 0, this.SpinSpeed);
 
         }
-
-
     }
 
+  
     public void RouletteBut()
     {
         if (CanPressBut)
@@ -111,5 +120,66 @@ public class RouletteScript : MonoBehaviour
             HaveResult = true;
         }
 
+    }
+
+    public void RequestAnswer()
+    {
+        if(SpinSpeed>0)
+        {
+            RouletteBut();
+        }
+        else
+        {
+            StartPanel.SetActive(true);
+            rouletteGoldCost = (long)((PlayerPrefs.GetInt("_Clicklevel") * 100000) * 1.13);
+
+            rouletteRubyCost = (long)((PlayerPrefs.GetInt("_Clicklevel") * 10) * 1.08);
+            if (RouletteType == "Gold")
+            {
+                StartPanelText.text = "룰렛을 돌리기 위해선 " + rouletteGoldCost + "만큼의 골드가 필요합니다.\n 돌리시겠습니까?";
+            }
+            else
+            {
+                StartPanelText.text = "룰렛을 돌리기 위해선 " + rouletteRubyCost + "만큼의 루비가 필요합니다.\n 돌리시겠습니까?";
+            }
+        }
+        
+    }
+
+    public void YesBut()
+    {
+        if (RouletteType == "Gold")
+        {
+            if (DataController.Instance.Gold >= rouletteGoldCost)
+            {
+                DataController.Instance.Gold -= (long)rouletteGoldCost;
+                RouletteBut();
+
+                StartPanel.SetActive(false);
+            }
+            else
+            {
+                StartPanel.SetActive(false);
+            }
+        }
+        else
+        {
+            if (DataController.Instance.Ruby >= rouletteRubyCost)
+            {
+                DataController.Instance.Ruby -= (long)rouletteRubyCost;
+                RouletteBut();
+                StartPanel.SetActive(false);
+            }
+            else
+            {
+                StartPanel.SetActive(false);
+
+            }
+        }
+    }
+    public void NoBut()
+    {
+
+        StartPanel.SetActive(false);
     }
 }

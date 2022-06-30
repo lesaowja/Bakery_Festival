@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\PerSecUpButton.cs" />
     <Compile Include="Assets\Scripts\RouletteManager.cs" />
     <Compile Include="Assets\Scripts\RouletteScript.cs" />
+    <Compile Include="Assets\Scripts\XXXXXXXXXXXXXX.cs" />
     <Compile Include="Assets\Scripts\ClickButMusicMng.cs" />
     <Compile Include="Assets\Scripts\UITextManager.cs" />
     <Compile Include="Assets\Scripts\DuckBugFixed.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Assets\Scripts\MusicMng.cs" />
     <Compile Include="Assets\Scripts\GenerateFoods.cs" />
     <Compile Include="Assets\Scripts\UIButtonManager.cs" />
+    <Compile Include="Assets\Scripts\RouletteGoHome.cs" />
     <Compile Include="Assets\Scripts\ShopInfo.cs" />
     <Compile Include="Assets\Scripts\ClickEffect.cs" />
     <Compile Include="Assets\Scripts\SpineManager.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Scripts\DropFoodsPointMng.cs" />
     <Compile Include="Assets\Scripts\EmptyPlace.cs" />
     <Compile Include="Assets\Scripts\DeleteDataAll.cs" />
+    <Compile Include="Assets\RouletteMusicMng.cs" />
     <Compile Include="Assets\Scripts\MiniGameCoolDown.cs" />
     <Compile Include="Assets\Scripts\R_NPC_Spawn.cs" />
     <Compile Include="Assets\Scripts\NPC.cs" />
@@ -95,7 +98,6 @@
     <Compile Include="Assets\Scripts\FestivalManager.cs" />
     <Compile Include="Assets\Scripts\TextMannger.cs" />
     <Compile Include="Assets\Scripts\MainClickButton.cs" />
-    <Compile Include="Assets\RouletteMusicMng.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\SpineTest\hamster.atlas.txt" />

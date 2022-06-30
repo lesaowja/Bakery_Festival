@@ -102,28 +102,36 @@ public class DropFoodsStartTImers : MonoBehaviour
 
             if (ResultSum <= 800)
             {
-                EndString = "형편없구만 이거먹고 떨어지게";
+                DataController.Instance.Ruby += 30;
+                EndString = "이거나 먹게.... 30개의 루비를 획득했습니다";
                 //제일 낮은 보상
             }
             else if (ResultSum > 800 && ResultSum <= 950)
             {
+                DataController.Instance.Ruby += 50;
                 EndString = "쓸모가 없진않네";
+
             }
             else if (ResultSum > 950 && ResultSum <= 1100)
             {
+                DataController.Instance.Ruby += 150;
                 EndString = "조금만 더 노력해 보게";
             }
             else if (ResultSum > 1100 && ResultSum <= 1200)
             {
+                DataController.Instance.Ruby += 200;
                 EndString = "하면 되지않나 하하하";
             }
             else if (ResultSum > 1200 && ResultSum <= 1400)
             {
+                DataController.Instance.Ruby += 250;
                 EndString = "놀랍구만.!!";
             }
             else if (ResultSum > 1400)
             {
+                DataController.Instance.Ruby += 300;
                 EndString = "뭐하는 사람인가 자네는?";
+
             }
            
             EndText.text = EndString;

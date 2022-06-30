@@ -8,31 +8,21 @@ public class MiniGameUiMng : MonoBehaviour
     string Name;
     string Gold;
     string ruby;
-    string perGold;
+    int perGold;
 
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI RubyText;
     public TextMeshProUGUI GoldText;
-    public TextMeshProUGUI  PerGoldText;
+    public TextMeshProUGUI PerGoldText;
 
 
     void Start()
     {
-        Name = PlayerPrefs.GetString("Name");
-        Gold = PlayerPrefs.GetString("Gold");
-        ruby = PlayerPrefs.GetString("Ruby");
-        perGold = PlayerPrefs.GetString("_goldPerSec");
-
-        NameText.text = Name;
-        GoldText.text = Gold;
-        RubyText.text = ruby;
-        PerGoldText.text = perGold; 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        perGold = DataController.Instance.GetGoldPerSec();
+        GoldText.text = string.Format("{0:#,###0}", DataController.Instance.Gold) + "$";
+        NameText.text = PlayerPrefs.GetString("Name").ToString();
+        RubyText.text = string.Format("{0:#,###0}", DataController.Instance.Ruby);
+        PerGoldText.text = perGold.ToString(); 
     }
 
     public void SetStartBut()
